@@ -22,5 +22,10 @@ def all_routes(path):
     return redirect("/")
 
 
+@app.route("/colpesaje/legacy3.0.0")
+def colpesaje():
+    return render_template("colpesaje_legacy.html")
+
+
 if __name__ == "__main__":
     app.run(port=port)
