@@ -1,0 +1,77 @@
+@import "bootstrap.min";
+// /* Estilos de los inputs*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  outline: none;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+.wrapper {
+  background: #fff;
+  padding: 10px 8px 0px 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.wrapper .input-data {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+.wrapper .input-data input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid silver;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #4158d0;
+}
+.wrapper .input-data label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.input-data .underline {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+}
+//Clases personalizadas
+.caro {
+  background-color: aqua;
+}
+.btn-menus {
+  @extend .row;
+  @extend .m-0;
+  @extend .align-items-center;
+  @extend .bg-danger;
+  @extend .rounded-3;
+}
+.btn-entrada {
+  @extend .row;
+  @extend .m-0;
+  @extend .align-items-center;
+  @extend .bg-success;
+  @extend .rounded-3;
+}
+.btn-cancelar {
+  @extend .row;
+  @extend .m-0;
+  @extend .align-items-center;
+  @extend .bg-danger;
+  @extend .rounded-3;
+}

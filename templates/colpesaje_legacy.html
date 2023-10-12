@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/styles_legacy.css" />
     <script defer src="/static/js/bootstrap.min.js"></script>
+    <script defer src="/static/js/js_legacy.js"></script>
   </head>
   <body>
     <div class="container text-center bg-primary">
       <div class="row align-items-start gap-3">
-        <div class="col flex-column bg-secondary">
-          <div class="col d-flex flex-column">
+        <!-- Primera columa de botones -->
+        <div class="col">
+          <div class="row bg-warning">
             <div class="col">
               <p class="h4">Seleccionar</p>
             </div>
           </div>
-          <div class="col d-flex flex-column py-5 px-2 gap-4">
-            <div class="row align-items-center m-4 bg-danger rounded-3">
+          <!-- Columna 1 -->
+          <div
+            class="row d-flex flex-column py-5 px-2 gap-4 mb-5 bg-secondary rounded-end"
+          >
+            <div class="btn-menus">
               <div class="col">
                 <img
                   class="w-auto"
@@ -25,9 +31,9 @@
                   alt="icon user"
                 />
               </div>
-              <div class="col"><p class="h4">Iniciar sesión</p></div>
+              <div class="col"><span class="h5">Iniciar sesión</span></div>
             </div>
-            <div class="row align-items-center m-4 bg-danger rounded-3">
+            <div class="btn-menus">
               <div class="col">
                 <img
                   class="w-auto"
@@ -35,9 +41,9 @@
                   alt="icon user"
                 />
               </div>
-              <div class="col"><p class="h4">Iniciar sesión</p></div>
+              <div class="col"><span class="h5">Iniciar sesión</span></div>
             </div>
-            <div class="row align-items-center m-4 bg-danger rounded-3">
+            <div class="btn-menus">
               <div class="col">
                 <img
                   class="w-auto"
@@ -45,11 +51,11 @@
                   alt="icon user"
                 />
               </div>
-              <div class="col"><p class="h4">Iniciar sesión</p></div>
+              <div class="col"><span class="h5">Iniciar sesión</span></div>
             </div>
           </div>
-          <div class="col">
-            <div class="row">
+          <div class="row gap-4">
+            <div class="btn-cancelar">
               <div class="col">
                 <img
                   class="w-auto"
@@ -59,7 +65,7 @@
               </div>
               <div class="col"><p class="h4">Iniciar sesión</p></div>
             </div>
-            <div class="row">
+            <div class="btn-entrada">
               <div class="col">
                 <img
                   class="w-auto"
@@ -71,11 +77,102 @@
             </div>
           </div>
         </div>
-        <div class="col-5 flex-column bg-secondary">
-          <div class="col d-flex flex-column">4</div>
-          <div class="col d-flex flex-column">5</div>
-          <div class="col d-flex flex-column">6</div>
-          <div class="col d-flex flex-column">7</div>
+        <!-- Columna 2 de datos -->
+        <div class="col-6 d-flex flex-column bg-secondary gap-2">
+          <div class="col d-flex flex-column">
+            <!-- Peso de la bascula -->
+            <div class="col h1">
+              4000
+              <span>kg</span>
+            </div>
+          </div>
+          <!-- Datos del cliente -->
+          <div class="col d-flex flex-column border-1 border border-dark">
+            <form action="" method="post">
+              <div class="row justify-content-between m-2 gap-3 gx-0">
+                <div class="col-5">
+                  <div class="wrapper">
+                    <div class="input-data">
+                      <input type="text" required />
+                      <div class="underline"></div>
+                      <label>Cedula</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="wrapper">
+                    <div class="input-data">
+                      <input type="text" required />
+                      <div class="underline"></div>
+                      <label>Placa</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="wrapper">
+                    <div class="input-data">
+                      <input type="text" required />
+                      <div class="underline"></div>
+                      <label>Cabezote</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="wrapper">
+                    <div class="input-data">
+                      <input type="text" required />
+                      <div class="underline"></div>
+                      <label>Cabezote</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Error de peso -->
+          <div class="col">
+            <div class="row bg-warning m-0">
+              <div class="col">
+                <div class="bd-danger">Error:</div>
+              </div>
+              <div class="col"><span>12 kg</span></div>
+            </div>
+          </div>
+          <!-- Espacio para la tabla de vehiculos en transito -->
+          <div class="col d-flex flex-column table-responsive">
+            <table id="enTransito" class="table table-striped bg-white">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                  <th scope="col">Handle</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="elemento">
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr id="elemento">
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr id="elemento">
+                  <th scope="row">3</th>
+                  <td>Larry the Bird</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div class="col flex-column bg-secondary">
           <div class="col d-flex flex-column">4</div>
