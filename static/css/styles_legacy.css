@@ -11386,11 +11386,20 @@ html {
   overflow: hidden;
 }
 
+.btn-menus {
+  display: flex;
+  justify-content: center;
+}
 .btn-menus > div:first-child {
   height: max-content;
+  padding: 8%;
 }
 .btn-menus > div:first-child > img {
   width: 20px;
+}
+.btn-menus > div:last-child {
+  padding: 0;
+  width: max-content;
 }
 .btn-entrada > div:first-child {
   height: max-content;
@@ -11414,6 +11423,15 @@ html {
 }
 .columna2 {
   background: #626260;
+}
+.columna2 > div:nth-child(1) {
+  flex: inherit;
+}
+.columna2 > div:nth-child(2) {
+  flex: inherit;
+}
+.columna2 > div:nth-child(3) {
+  flex: inherit;
 }
 .peso_bascula {
   color: rgb(255, 255, 255);
@@ -11468,6 +11486,7 @@ html {
   margin-left: 10px;
 }
 .btn-menus.control {
+  justify-content: space-around;
   background-color: #3a5aa6 !important;
 }
 .btn-menus.control img {

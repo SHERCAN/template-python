@@ -38,15 +38,20 @@ html {
   @extend .align-items-center;
   @extend .bg-danger;
   @extend .rounded-3;
+  display: flex;
+  justify-content: center;
   > div:first-child {
     @extend .col-4;
     height: max-content;
+    padding: 8%;
     > img {
       width: 20px;
     }
   }
   > div:last-child {
     @extend .col-8;
+    padding: 0;
+    width: max-content;
     > span {
       @extend .h5;
     }
@@ -180,6 +185,7 @@ html {
     @extend .col;
     @extend .d-flex;
     @extend .flex-column;
+    flex: inherit;
   }
   // Dato de los cliente
   > div:nth-child(2) {
@@ -189,10 +195,12 @@ html {
     @extend .border-1;
     @extend .border;
     @extend .border-dark;
+    flex: inherit;
   }
   // Errores producidos por la diferencia
   > div:nth-child(3) {
     @extend .col;
+    flex: inherit;
   }
   // Tabla de carros en transito
   > div:nth-child(4) {
@@ -298,6 +306,7 @@ html {
 // Colores de los botones inferiores
 .btn-menus.control {
   @extend .col;
+  justify-content: space-around;
   background-color: #3a5aa6 !important;
   img {
     width: 100% !important;
