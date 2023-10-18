@@ -1,0 +1,24 @@
+{
+  "name": "template-python",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <a href=\"https://fl0.com/\" target=\"blank\">\r     <img src=\"https://user-images.githubusercontent.com/88681427/217122968-e6132cad-1944-4ebe-9ec1-105af6a18c4f.png\">\r   </a>\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "clean": "purgecss --css ./static/css/styles_legacy.css --content ./templates/colpesaje_legacy.html --output ./static/dist/css/styles_legacy.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SHERCAN/template-python.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SHERCAN/template-python/issues"
+  },
+  "homepage": "https://github.com/SHERCAN/template-python#readme",
+  "devDependencies": {
+    "purgecss": "^5.0.0",
+    "sass": "^1.69.3"
+  }
+}

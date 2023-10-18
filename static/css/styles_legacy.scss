@@ -6,12 +6,221 @@
   outline: none;
 }
 body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  // min-height: 100vh;
+  // background: linear-gradient(-135deg, #c850c0, #4158d0);
+  @extend .bg-primary;
+  > div:first-child {
+    height: 100%;
+    > div {
+      height: 100%;
+      justify-content: space-between;
+    }
+  }
 }
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+//Clases personalizadas
+.btn-menus {
+  @extend .row;
+  @extend .m-0;
+  @extend .align-items-center;
+  @extend .bg-danger;
+  @extend .rounded-3;
+  > div:first-child {
+    @extend .col-4;
+    height: max-content;
+    > img {
+      width: 20px;
+    }
+  }
+  > div:last-child {
+    @extend .col-8;
+    > span {
+      @extend .h5;
+    }
+  }
+}
+.btn-entrada {
+  @extend .row;
+  @extend .m-0;
+  @extend .align-items-center;
+  @extend .bg-success;
+  @extend .rounded-3;
+  > div:first-child {
+    @extend .col-4;
+    height: max-content;
+    > img {
+      width: 20px;
+    }
+  }
+  > div:last-child {
+    @extend .col-8;
+    > span {
+      @extend .h5;
+    }
+  }
+}
+.btn-cancelar {
+  @extend .row;
+  @extend .m-0;
+  @extend .align-items-center;
+  @extend .bg-danger;
+  @extend .rounded-3;
+  > div:first-child {
+    @extend .col-4;
+    height: max-content;
+    > img {
+      width: 20px;
+    }
+  }
+  > div:last-child {
+    @extend .col-8;
+    > span {
+      @extend .h5;
+    }
+  }
+}
+.ventanaPrincipal {
+  @extend .text-center;
+  @extend .bg-primary;
+  @extend .row;
+  @extend .gap-3;
+}
+// Columna 1 todo lo que se encuentra dentro de ella
+.columna1 {
+  @extend .col;
+  @extend .d-flex;
+  @extend .flex-column;
+  > div:first-child {
+    @extend .row;
+    @extend .bg-secondary;
+    @extend .rounded-end;
+    > div:last-child {
+      @extend .row;
+      @extend .d-flex;
+      @extend .flex-column;
+      @extend .py-5;
+      @extend .px-2;
+      @extend .gap-4;
+      @extend .mb-5;
+    }
+  }
+  // Botones de entrada y cancelar derechos
+  > div:last-child {
+    @extend .row;
+    @extend .gap-4;
+    @extend .ms-1;
+  }
+}
+// botones_laterales
+.botones_laterales {
+  @extend .col;
+  padding: 0;
+  @extend .bg-warning;
+  > div:first-child {
+    @extend .col;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+      @extend.w-25;
+    }
+    > p {
+      @extend .h4;
+    }
+  }
+}
+// Boton entrada
+// .botones_entrada {
+//   @extend .btn-entrada;
+//   > div {
+//     @extend .col;
+//     > img {
+//       @extend .w-25;
+//     }
+//     span {
+//       @extend .h4;
+//     }
+//   }
+// }
+// Boton cancelar
+.botones_cancelar {
+  @extend .btn-cancelar;
+  > div {
+    @extend .col;
+    > img {
+      @extend .w-25;
+    }
+    span {
+      @extend .h4;
+    }
+  }
+}
+// Columna 2 todo lo que se encuentra dentro de ella
+.columna2 {
+  @extend .col-6;
+  @extend .d-flex;
+  @extend .flex-column;
+  background: #626260;
+  @extend .gap-2;
+  // Peso de la bascula
+  > div:nth-child(1) {
+    @extend .col;
+    @extend .d-flex;
+    @extend .flex-column;
+  }
+  // Dato de los cliente
+  > div:nth-child(2) {
+    @extend .col;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .border-1;
+    @extend .border;
+    @extend .border-dark;
+  }
+  // Errores producidos por la diferencia
+  > div:nth-child(3) {
+    @extend .col;
+  }
+  // Tabla de carros en transito
+  > div:nth-child(4) {
+    @extend .col-12;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .table-responsive;
+  }
+}
+// Valor del peso de la bascula
+.peso_bascula {
+  @extend .col;
+  @extend .h1;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px white;
+}
+// Grilla de los campos de texto de los clientes
+.datos_clientes {
+  @extend .row;
+  @extend .justify-content-between;
+  @extend .m-2;
+  @extend .gap-3;
+  @extend .gx-0;
+  > div {
+    @extend .col-5;
+  }
+}
+// Campos de texto de los datos del cliente
 .wrapper {
   background: #fff;
   padding: 10px 8px 0px 8px;
@@ -50,28 +259,50 @@ body {
   width: 100%;
   bottom: 0;
 }
-//Clases personalizadas
-.caro {
-  background-color: aqua;
-}
-.btn-menus {
+.error_peso {
   @extend .row;
+  @extend .bg-warning;
   @extend .m-0;
-  @extend .align-items-center;
-  @extend .bg-danger;
-  @extend .rounded-3;
+  > div {
+    @extend.col;
+  }
 }
-.btn-entrada {
-  @extend .row;
-  @extend .m-0;
-  @extend .align-items-center;
-  @extend .bg-success;
-  @extend .rounded-3;
+// Columna 3
+.columna3 {
+  @extend .col;
+  @extend .d-flex;
+  @extend .flex-column;
+  > div:first-child {
+    @extend .row;
+    @extend .bg-secondary;
+    @extend .rounded-start;
+    > div:last-child {
+      margin-left: 10px;
+      @extend .row;
+      @extend .d-flex;
+      @extend .flex-column;
+      @extend .py-5;
+      @extend .px-2;
+      @extend .gap-4;
+      @extend .mb-5;
+    }
+  }
+  // Botones de entrada y cancelar derechos
+  > div:last-child {
+    @extend .row;
+    @extend .gap-4;
+    @extend .me-1;
+  }
 }
-.btn-cancelar {
-  @extend .row;
-  @extend .m-0;
-  @extend .align-items-center;
-  @extend .bg-danger;
-  @extend .rounded-3;
+
+// Colores de los botones inferiores
+.btn-menus.control {
+  @extend .col;
+  background-color: #3a5aa6 !important;
+  img {
+    width: 100% !important;
+  }
+  > div:first-child {
+    padding: 0;
+  }
 }
