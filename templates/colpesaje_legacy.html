@@ -26,32 +26,23 @@
             <!-- Boton 1 -->
             <div class="btn-menus">
               <div>
-                <img
-                  src="https://bunbury-blue-tongue-ngra.2.us-1.fl0.io/static/icons/icon-user.png"
-                  alt="icon user"
-                />
+                <img src="../static/icons/login.png" alt="icon user" />
               </div>
               <div><span>Iniciar sesión</span></div>
             </div>
             <!-- Boton 2 -->
             <div class="btn-menus">
               <div>
-                <img
-                  src="https://bunbury-blue-tongue-ngra.2.us-1.fl0.io/static/icons/icon-user.png"
-                  alt="icon user"
-                />
+                <img src="../static/icons/settings.png" alt="icon user" />
               </div>
-              <div><span>Iniciar sesión</span></div>
+              <div><span>Configuración</span></div>
             </div>
             <!-- Boton 3 -->
             <div class="btn-menus">
               <div>
-                <img
-                  src="https://bunbury-blue-tongue-ngra.2.us-1.fl0.io/static/icons/icon-user.png"
-                  alt="icon user"
-                />
+                <img src="../static/icons/printer.png" alt="icon user" />
               </div>
-              <div><span>Iniciar sesión</span></div>
+              <div><span>Impresion de tiquetes</span></div>
             </div>
           </div>
         </div>
@@ -59,19 +50,16 @@
           <!-- Boton cancelar -->
           <div class="btn-menus">
             <div>
-              <img
-                src="https://bunbury-blue-tongue-ngra.2.us-1.fl0.io/static/icons/icon-user.png"
-                alt="icon user"
-              />
+              <img src="../static/icons/clean.png" alt="icon user" />
             </div>
-            <div><span>Iniciar sesión</span></div>
+            <div><span>Limpiar</span></div>
           </div>
           <!-- Boton entrada -->
           <div class="btn-menus control">
             <div>
               <img src="../static/icons/truck-right.png" alt="icon user" />
             </div>
-            <div><span>Iniciar sesión</span></div>
+            <div><span>Entrada</span></div>
           </div>
         </div>
       </div>
@@ -174,36 +162,99 @@
         </div>
         <!-- Espacio para la tabla de vehiculos en transito -->
         <div>
-          <table id="enTransito" class="table table-striped bg-white">
+          <table id="enTransito" class="tabla-transito">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">Handle</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Placa</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Cabezote</th>
+                <th scope="col">Material</th>
+                <th scope="col">Peso</th>
               </tr>
             </thead>
             <tbody>
               <tr id="elemento">
                 <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>CBD-345</td>
+                <td>Juan Briceño</td>
+                <td>KJET-12</td>
+                <td>Grava ligera</td>
+                <td>4500</td>
               </tr>
               <tr id="elemento">
                 <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td>XYZ-789</td>
+                <td>Maria Pérez</td>
+                <td>ABCD-34</td>
+                <td>Arena fina</td>
+                <td>3200</td>
               </tr>
               <tr id="elemento">
                 <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
+                <td>LMN-123</td>
+                <td>Luis González</td>
+                <td>EFGH-56</td>
+                <td>Cemento</td>
+                <td>5800</td>
               </tr>
+              <tr id="elemento">
+                <th scope="row">4</th>
+                <td>PQR-567</td>
+                <td>Ana Sánchez</td>
+                <td>IJKL-78</td>
+                <td>Piedra triturada</td>
+                <td>6900</td>
+              </tr>
+              <tr id="elemento">
+                <th scope="row">5</th>
+                <td>RST-890</td>
+                <td>Carlos Rodríguez</td>
+                <td>MNOP-90</td>
+                <td>Asfalto</td>
+                <td>3900</td>
+              </tr>
+              <tr id="elemento">
+                <th scope="row">6</th>
+                <td>UVW-234</td>
+                <td>Marta López</td>
+                <td>QRST-12</td>
+                <td>Concreto</td>
+                <td>7500</td>
+              </tr>
+              <tr id="elemento">
+                <th scope="row">7</th>
+                <td>XYZ-567</td>
+                <td>Ricardo González</td>
+                <td>ABCD-34</td>
+                <td>Arena fina</td>
+                <td>3200</td>
+              </tr>
+              <tr id="elemento">
+                <th scope="row">8</th>
+                <td>PQR-123</td>
+                <td>Elena Martínez</td>
+                <td>IJKL-78</td>
+                <td>Piedra triturada</td>
+                <td>6900</td>
+              </tr>
+              <tr id="elemento">
+                <th scope="row">9</th>
+                <td>RST-890</td>
+                <td>Fernando López</td>
+                <td>MNOP-90</td>
+                <td>Asfalto</td>
+                <td>3900</td>
+              </tr>
+              <tr id="elemento">
+                <th scope="row">10</th>
+                <td>UVW-234</td>
+                <td>Laura Rodríguez</td>
+                <td>QRST-12</td>
+                <td>Concreto</td>
+                <td>7500</td>
+              </tr>
+              <!-- Puedes ajustar los valores de estas filas como desees -->
             </tbody>
           </table>
         </div>
@@ -222,32 +273,23 @@
             <!-- Boton 1 -->
             <div class="btn-menus">
               <div>
-                <img
-                  src="https://bunbury-blue-tongue-ngra.2.us-1.fl0.io/static/icons/icon-user.png"
-                  alt="icon user"
-                />
+                <img src="../static/icons/reports.png" alt="icon user" />
               </div>
-              <div><span>Iniciar sesión</span></div>
+              <div><span>Reportes</span></div>
             </div>
             <!-- Boton 2 -->
             <div class="btn-menus">
               <div>
-                <img
-                  src="https://bunbury-blue-tongue-ngra.2.us-1.fl0.io/static/icons/icon-user.png"
-                  alt="icon user"
-                />
+                <img src="../static/icons/menu.png" alt="icon user" />
               </div>
-              <div><span>Iniciar sesión</span></div>
+              <div><span>Otro menu</span></div>
             </div>
             <!-- Boton 3 -->
             <div class="btn-menus">
               <div>
-                <img
-                  src="https://bunbury-blue-tongue-ngra.2.us-1.fl0.io/static/icons/icon-user.png"
-                  alt="icon user"
-                />
+                <img src="../static/icons/camera.png" alt="icon user" />
               </div>
-              <div><span>Iniciar sesión</span></div>
+              <div><span>Cámara LPR</span></div>
             </div>
           </div>
         </div>
@@ -255,19 +297,16 @@
           <!-- Boton cancelar -->
           <div class="btn-menus">
             <div>
-              <img
-                src="https://bunbury-blue-tongue-ngra.2.us-1.fl0.io/static/icons/icon-user.png"
-                alt="icon user"
-              />
+              <img src="../static/icons/clean.png" alt="icon user" />
             </div>
-            <div><span>Iniciar sesión</span></div>
+            <div><span>Limpiar</span></div>
           </div>
           <!-- Boton entrada -->
           <div class="btn-menus control">
             <div>
               <img src="../static/icons/truck-left.png" alt="icon user" />
             </div>
-            <div><span>Iniciar sesión</span></div>
+            <div><span>Salida</span></div>
           </div>
         </div>
       </div>

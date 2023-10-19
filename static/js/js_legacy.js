@@ -14,3 +14,24 @@ for (var i = 0; i < rows.length; i++) {
     }
   });
 }
+
+// Selecciona el div por su ID
+const miDiv = document.querySelectorAll(".btn-menus");
+
+// Agrega un controlador de eventos de clic al div
+miDiv.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    // Cambia el color al hacer clic
+    boton.style.backgroundColor = "#ff5733";
+    boton.addEventListener("click", () => {
+      // Abre una nueva ventana o ventana emergente
+      const nuevaVentana = window.open(
+        "https://www.google.com",
+        "NombreVentana",
+        "width=600,height=400"
+      );
+    });
+  });
+
+  // Puedes personalizar las propiedades de la ventana emergente según tus necesidades
+});
