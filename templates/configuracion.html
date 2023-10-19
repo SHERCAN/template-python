@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/static/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="/static/css/configuracion.css" />
+    <script defer src="/static/js/bootstrap.min.js"></script>
+    <script defer src="/static/js/configuracion.js"></script>
+  </head>
+  <body>
+    <div class="col">
+      <div class="container row">
+        <h1>Datos del usuario</h1>
+        <table id="formulario" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Titulo Campo</th>
+              <th>Obligatorio</th>
+              <th>Autocompletado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" name="titulo" class="form-control" />
+              </td>
+              <td>
+                <input
+                  type="checkbox"
+                  name="obligatorio"
+                  class="form-check-input"
+                />
+              </td>
+              <td>
+                <input
+                  type="checkbox"
+                  name="autocompletado"
+                  class="form-check-input"
+                />
+              </td>
+              <td>
+                <button class="btn btn-danger delete-row">-</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row">
+          <div class="col d-flex justify-content-end">
+            <button id="agregarFila">+</button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="container row">
+        <div class="col">
+          <h1>Configuración comuniación bascula.</h1>
+          <div class="form-group">
+            <label for="tipoConexion">Seleccione el tipo de conexión:</label>
+            <select class="form-control" id="tipoConexion">
+              <option value="serial">Conexión Serial</option>
+              <option value="tcpip">Conexión TCP/IP</option>
+            </select>
+          </div>
+          <div id="configSerial" class="config">
+            <h2>Configuración de Conexión Serial</h2>
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td>Puerto:</td>
+                  <td>
+                    <input type="text" class="form-control" id="puertoSerial" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Baudios:</td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="baudiosSerial"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Paridad:</td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="paridadSerial"
+                    />
+                  </td>
+                </tr>
+                <!-- Agrega más campos si es necesario -->
+              </tbody>
+            </table>
+          </div>
+          <div id="configTCP" class="config" style="display: none">
+            <h2>Configuración de Conexión TCP/IP</h2>
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td>Host:</td>
+                  <td>
+                    <input type="text" class="form-control" id="hostTCP" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Puerto:</td>
+                  <td>
+                    <input type="text" class="form-control" id="puertoTCP" />
+                  </td>
+                </tr>
+                <!-- Agrega más campos si es necesario -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="container row"><button id="guardar">Guardar</button></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
