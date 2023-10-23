@@ -1,0 +1,28 @@
+@import "bootstrap.min";
+
+dialog {
+  z-index: 1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  > div {
+    background-color: rgba(var(--bs-primary-rgb), 1);
+    > div {
+      background-color: rgba(var(--bs-secondary-rgb), 1);
+    }
+  }
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+html,
+body {
+  background-color: rgba(var(--bs-primary-rgb), 1);
+}

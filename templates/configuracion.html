@@ -11,6 +11,7 @@
   </head>
   <body>
     <div class="col">
+      <!-- Datos de los camiones -->
       <div class="container row">
         <h1>Datos del usuario</h1>
         <table id="formulario" class="table table-striped">
@@ -48,14 +49,40 @@
         </table>
         <div class="row">
           <div class="col d-flex justify-content-end">
-            <button id="agregarFila">+</button>
+            <button class="agregarCampos" id="agregarFila">Añadir campo</button>
           </div>
         </div>
       </div>
       <br />
+      <!-- Datos del usuario Servicio -->
       <div class="container row">
         <div class="col">
-          <h1>Configuración comuniación bascula.</h1>
+          <div class="config">
+            <h1>Datos del usuario servicio</h1>
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td>Usuario</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Contraseña</td>
+                  <td>
+                    <input type="password" class="form-control" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- Datos de la comunicación con la bascula -->
+      <div class="container row">
+        <div class="col">
+          <h1>Configuración comuniación bascula</h1>
           <div class="form-group">
             <label for="tipoConexion">Seleccione el tipo de conexión:</label>
             <select class="form-control" id="tipoConexion">
@@ -64,7 +91,7 @@
             </select>
           </div>
           <div id="configSerial" class="config">
-            <h2>Configuración de Conexión Serial</h2>
+            <label>Configuración de Conexión Serial:</label>
             <table class="table table-bordered">
               <tbody>
                 <tr>
@@ -98,7 +125,7 @@
             </table>
           </div>
           <div id="configTCP" class="config" style="display: none">
-            <h2>Configuración de Conexión TCP/IP</h2>
+            <label>Configuración de Conexión TCP/IP</label>
             <table class="table table-bordered">
               <tbody>
                 <tr>
@@ -119,6 +146,182 @@
           </div>
         </div>
       </div>
+      <br />
+      <!-- Datos del servidor de envío de peso -->
+      <div class="container row">
+        <div class="col">
+          <div class="config">
+            <h1>Configuración del servidor envío de peso</h1>
+          </div>
+          <div class="config">
+            <label>Servidor TCP/IP</label>
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td>Host:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Puerto:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <!-- Agrega más campos si es necesario -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- Creación del administrador -->
+      <div class="container row">
+        <div class="col">
+          <div class="config">
+            <h1>Creación de los administradores</h1>
+          </div>
+          <div class="config" id="tablaAdministradores">
+            <table class="table table-bordered">
+              <label>Administrador 1</label>
+              <tbody>
+                <tr>
+                  <td>Nombre:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Usuario:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Contraseña:</td>
+                  <td>
+                    <input type="password" class="form-control" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <label>Administrador 2</label>
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td>Nombre:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Usuario:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Contraseña:</td>
+                  <td>
+                    <input type="password" class="form-control" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <label>Administrador 3</label>
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td>Nombre:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Usuario:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Contraseña:</td>
+                  <td>
+                    <input type="password" class="form-control" />
+                  </td>
+                </tr>
+                <!-- Agrega más campos si es necesario -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- Creación de los usuarios -->
+      <div class="container row">
+        <div class="col">
+          <div class="config">
+            <h1>Configuración del servidor envío de peso</h1>
+          </div>
+          <div class="config" id="tablaServidorPeso">
+            <label>Servidor TCP/IP</label>
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <td>Host:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Puerto:</td>
+                  <td>
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <!-- Agrega más campos si es necesario -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="container row">
+        <h1>Datos del usuario</h1>
+        <table id="formularioOperario" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre operador</th>
+              <th>Usuario</th>
+              <th>Contraseña</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" name="titulo" class="form-control" />
+              </td>
+              <td>
+                <input type="text" class="form-control" />
+              </td>
+              <td>
+                <input type="password" class="form-control" />
+              </td>
+              <td>
+                <button class="btn btn-danger delete-row">-</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row">
+          <div class="col d-flex justify-content-end">
+            <button class="agregarCampos" id="agregarOperario">
+              Añadir Operario
+            </button>
+          </div>
+        </div>
+      </div>
+      <br />
       <div class="container row"><button id="guardar">Guardar</button></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
