@@ -16,22 +16,25 @@ for (var i = 0; i < rows.length; i++) {
 }
 
 // Selecciona el div por su ID
-const miDiv = document.querySelectorAll(".btn-menus");
+const btnConf = document.querySelector("#btnConfiguracion");
 
 // Agrega un controlador de eventos de clic al div
-miDiv.forEach((boton) => {
-  boton.addEventListener("click", () => {
-    // Cambia el color al hacer clic
-    boton.style.backgroundColor = "#ff5733";
-    boton.addEventListener("click", () => {
-      // Abre una nueva ventana o ventana emergente
-      const nuevaVentana = window.open(
-        "https://www.google.com",
-        "NombreVentana",
-        "width=600,height=400"
-      );
-    });
-  });
+btnConf.addEventListener("click", () => {
+  // Abre una nueva ventana o ventana emergente
+  const nuevaVentana = window.open(
+    "configuracion.html",
+    "NombreVentana",
+    "width=600,height=400"
+  );
+});
+const btnIn = document.querySelector("#btnIniciarSesion");
 
-  // Puedes personalizar las propiedades de la ventana emergente según tus necesidades
+// Agrega un controlador de eventos de clic al div
+btnIn.addEventListener("click", () => {
+  // Abre una nueva ventana o ventana emergente
+  const nuevaVentana = window.open(
+    "sesion.html",
+    "NombreVentana",
+    "width=600,height=400"
+  );
 });
