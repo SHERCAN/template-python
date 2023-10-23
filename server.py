@@ -23,8 +23,18 @@ def all_routes(path):
 
 
 @app.route("/colpesaje/legacy3.0.0")
-def colpesaje():
+def colpesajeMain():
     return render_template("colpesaje_legacy.html")
+
+
+@app.route("/colpesaje/legacy3.0.0/configuracion")
+def colpesajeConf():
+    return render_template("configuracion.html")
+
+
+@app.route("/colpesaje/legacy3.0.0/sesion")
+def colpesajeSesion():
+    return render_template("sesion.html")
 
 
 if __name__ == "__main__":
